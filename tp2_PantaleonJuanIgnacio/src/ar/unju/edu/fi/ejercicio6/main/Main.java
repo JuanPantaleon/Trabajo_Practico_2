@@ -8,20 +8,29 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		FelinoDomestico garfield = new FelinoDomestico("Garfield", (byte) 45, 12f);
-        Converter<FelinoDomestico, FelinoSalvaje> converter1 = x -> new FelinoSalvaje(x.getNombre(), x.getEdad(), x.getPeso());
-        if (Converter.isNotNull(garfield)) {
-            FelinoSalvaje felinoSalvaje = converter1.convert(garfield);
-            converter1.mostrarObjeto(felinoSalvaje);
-        }
+		
+        FelinoDomestico garfield = new FelinoDomestico("Garfield", (byte) 45, 12f);
 
-        
+        Converter<FelinoDomestico, FelinoSalvaje> converter = x -> new FelinoSalvaje(x.getNombre(), x.getEdad(), x.getPeso());
+
+        FelinoSalvaje felino1 = converter.convert(garfield);
+
+
+        converter.mostrarObjeto(felino1);
+
+
         FelinoSalvaje tannerSalvaje = new FelinoSalvaje("Tanner", (byte) 20, 186f);
-        Converter<FelinoSalvaje, FelinoDomestico> converter2 = x -> new FelinoDomestico(x.getNombre(), x.getEdad(), x.getPeso());
+
+
         if (Converter.isNotNull(tannerSalvaje)) {
-            FelinoDomestico felinoDomestico = converter2.convert(tannerSalvaje);
-            converter2.mostrarObjeto(felinoDomestico);
+            
+            Converter<FelinoSalvaje, FelinoDomestico> converterSalvajeADomestico = x -> new FelinoDomestico(x.getNombre(), x.getEdad(), x.getPeso());
+
+           
+            FelinoDomestico tannerDomestico = converterSalvajeADomestico.convert(tannerSalvaje);
+
+            
+            converterSalvajeADomestico.mostrarObjeto(tannerDomestico);
         }
     }
-
 }
