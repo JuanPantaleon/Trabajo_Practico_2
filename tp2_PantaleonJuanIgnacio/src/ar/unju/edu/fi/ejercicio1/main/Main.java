@@ -59,13 +59,13 @@ public class Main {
 	        double precioUnitario = scanner.nextDouble();
 	        scanner.nextLine(); 
 
-	        // Solicitar y validar el origen de fabricación
+	        
 	        Producto.OrigenFabricacion origenFabricacion = solicitarOrigenFabricacion(scanner);
 
-	        // Solicitar y validar la categoría
+	        
 	        Producto.Categoria categoria = solicitarCategoria(scanner);
 
-	        // Crear el producto y agregarlo a la lista
+	        
 	        Producto producto = new Producto(codigo, descripcion, precioUnitario, origenFabricacion, categoria);
 	        productos.add(producto);
 	        System.out.println("Producto creado con éxito.");
