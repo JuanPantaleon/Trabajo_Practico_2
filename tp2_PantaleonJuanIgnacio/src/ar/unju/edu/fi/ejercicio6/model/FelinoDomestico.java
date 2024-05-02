@@ -22,4 +22,12 @@ public class FelinoDomestico {
     public float getPeso() {
         return peso;
     }
+
+	@Override
+	public String toString() {
+		return "FelinoDomestico [nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + "]";
+	}
+
+	
+    
 }

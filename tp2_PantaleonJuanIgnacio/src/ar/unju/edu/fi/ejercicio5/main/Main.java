@@ -6,6 +6,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import ar.unju.edu.fi.ejercicio5.model.Producto;
+import ar.unju.edu.fi.ejercicio5.model.Producto.Categoria;
+import ar.unju.edu.fi.ejercicio5.model.Producto.OrigenFabricacion;
 import ar.unju.edu.fi.ejercicio5.interfaces.Pago;
 import ar.unju.edu.fi.ejercicio5.model.PagoEfectivo;
 import ar.unju.edu.fi.ejercicio5.model.PagoTarjeta;
@@ -51,21 +53,21 @@ public class Main {
 
     private static ArrayList<Producto> preCargarProductos() {
         ArrayList<Producto> productos = new ArrayList<>();
-        productos.add(new Producto("Camiseta", "Camiseta Deportiva", 100.0 , true));
-        productos.add(new Producto("Libro", "Lectura Ligera", 150.0, true));
-        productos.add(new Producto("Botella de Agua", "Bebida Hidratante", 200.0, true));
-        productos.add(new Producto("Zapatillas", "Zapatillas Adidas Calsado 40", 120.0, true));
-        productos.add(new Producto("Computadora", "Computadora con componentes Basicos", 180.0, true));
-        productos.add(new Producto("Lampara", "Lampara Decorativa", 90.0, true));
-        productos.add(new Producto("Martillo", "Herramienta para colocar Clavos", 110.0, true));
-        productos.add(new Producto("Cámara", "Dispositivo para tomar fotos", 130.0, true));
-        productos.add(new Producto("Mesa", "Mesa Decorativa", 160.0, true));
-        productos.add(new Producto("Telefono", "Dispositivo Movil Marca Samsung", 170.0, true));
-        productos.add(new Producto("Silla", "Silla Decorativa", 140.0, true));
-        productos.add(new Producto("Planta", "Pequeño Helecho", 190.0, true));
-        productos.add(new Producto("Cepillo", "Cepillo de dientes Colgate", 210.0, true));
-        productos.add(new Producto("Pelota", "Pelota de Fútbol", 220.0, true));
-        productos.add(new Producto("Cinta", "Cinta Metrica", 230.0, true));
+        productos.add(new Producto("Camiseta", "Camiseta Deportiva", 100.0 , OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Libro", "Lectura Ligera", 150.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Botella de Agua", "Bebida Hidratante", 200.0, OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Zapatillas", "Zapatillas Adidas Calsado 40", 120.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Computadora", "Computadora con componentes Basicos", 180.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Lampara", "Lampara Decorativa", 90.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Martillo", "Herramienta para colocar Clavos", 110.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Cámara", "Dispositivo para tomar fotos", 130.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Mesa", "Mesa Decorativa", 160.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Telefono", "Dispositivo Movil Marca Samsung", 170.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Silla", "Silla Decorativa", 140.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Planta", "Pequeño Helecho", 190.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Cepillo", "Cepillo de dientes Colgate", 210.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Pelota", "Pelota de Fútbol", 220.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto("Cinta", "Cinta Metrica", 230.0,OrigenFabricacion.ARGENTINA, Categoria.ELECTROHOGAR, true));
 
         return productos;
     }
